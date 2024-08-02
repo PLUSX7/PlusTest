@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ดาวน์โหลดเกมส์</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<script src="fbconf.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        loadDownloadCount('pack1');
+        loadDownloadCount('pack2');
+    });
+    </script>
+
+    <style>
+        body { font-family: 'Itim', cursive; text-align: center; color: #333; }
+        .container { display: flex; justify-content: center; flex-wrap: wrap; padding: 20px; }
+        .card { margin: 15px; max-width: 300px; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { border-top-left-radius: 15px; border-top-right-radius: 15px; max-width: 100%; height: auto; }
+        .card-body { padding: 20px; }
+        .btn-primary, .btn-secondary { transition: background-color 0.3s, border-color 0.3s; }
+        .btn-primary:hover { background-color: #0056b3; border-color: #004085; }
+        .btn-secondary:hover { background-color: #6c757d; border-color: #565e64; }
+        h3 { margin-top: 20px; margin-bottom: 40px; font-size: 1.8rem; color: #444; }
+        p { margin-top: 30px; font-size: 1.2rem; }
+        iframe { width: 100%; height: 600px; border: none; }
+    </style>
+</head>
+<body>
+    <h3>ดาวน์โหลดเกมส์กดด้านล้างเลย</h3>
+    <div class="container">
+        <div class="card">
+            <img src="https://img5.pic.in.th/file/secure-sv1/image-k-qDhWYcH-transformed_1.png" class="card-img-top" alt="Plus Icon">
+            <div class="card-body">
+            ดาวน์โหลดไปแล้ว <span id="pack1-count">Loading...</span> ครั้ง
+                <a href="https://img5.pic.in.th/file/secure-sv1/image-k-qDhWYcH-transformed_1.png" class="btn btn-primary btn-block mb-2" onclick="incrementDownload('pack1')">
+                    <i class="fa fa-download"></i> ดาวน์โหลด
+                </a>
+                <button class="btn btn-secondary btn-block" onclick="shareLink('.')">
+                    <i class="fa fa-share"></i> แชร์
+                </button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img5.pic.in.th/file/secure-sv1/image-k-qDhWYcH-transformed_1.png" class="card-img-top" alt="Plus Icon 2">
+            <div class="card-body">
+            ดาวน์โหลดไปแล้ว <span id="pack2-count">Loading...</span> ครั้ง
+                <a href="https://img5.pic.in.th/file/secure-sv1/image-k-qDhWYcH-transformed_1.png" class="btn btn-primary btn-block mb-2" onclick="incrementDownload('pack2')">
+                    <i class="fa fa-download"></i> ดาวน์โหลด
+                </a>
+                <button class="btn btn-secondary btn-block" onclick="shareLink('.')">
+                    <i class="fa fa-share"></i> แชร์
+                </button>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-success mt-4" data-toggle="modal" data-target="#supportModal">
+        สนับสนุนเรา
+    </button>
+    <div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="supportModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="supportModalLabel">สนับสนุนเรา</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+					<a href="https://tipme.in.th/@overlay/v2?token=QWoBEBwJpYk" target="_blank" class="btn btn-success mb-3">ผู้ที่บริจาคมากที่สุด</a>
+					<a href="https://tipme.in.th/@overlay/v2?token=QWoBHPIApYCa" target="_blank" class="btn btn-success mb-3">ผู้ที่บริจากล่าสุด(10คน)</a>
+                    <div>
+                        <div>
+                            <iframe src="donate-text.html"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="share.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <p><strong>โดย PlusXserver</strong></p>
+</body>
+</html>
